@@ -156,6 +156,7 @@ class HarrisKeypointDetector(KeypointDetector):
         features = []
 
         # Create grayscale image used for Harris detection
+        # 3채널로 하면 기울기가 급격하게 나와서 좀 더 정돈된 형태로 기울기를 구하기 위해 그레이스케일 사용
         grayImage = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
         # computeHarrisValues() computes the harris score at each pixel
